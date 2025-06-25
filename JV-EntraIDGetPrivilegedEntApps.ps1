@@ -49,4 +49,4 @@ foreach ($app in $applications) {
 
 # Step 5: Exporting
 $appDetails | Export-Csv -Path "JV-EntraIDGetPrivilegedApps_Report.csv" -NoTypeInformation -Encoding UTF8 -Delimiter ";"
-Write-Host "✅ Export finished: JV-EntraIDGetPrivilegedApps_Report.csv"
+Write-Host "Export finished: JV-EntraIDGetPrivilegedApps_Report.csv" -ForegroundColor Green
