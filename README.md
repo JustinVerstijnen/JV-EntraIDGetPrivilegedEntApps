@@ -22,4 +22,20 @@ A great, fast and easy PowerShell script to get all Entra ID Enterprise Applicat
 Install-Module Microsoft.Graph -Scope CurrentUser -Repository PSGallery -Force
 ```
 
+## How to run?
 
+Download the script and save it to your favorite location. Then open Powershell.
+
+Copy or navigate to the path of the script and type .\ and then the script name to run it.
+
+If Powershell says something about not running because of the execution policy, you can temporarily disable this with:
+
+```
+Set-ExecutionPolicy Unrestricted -Scope Process
+```
+
+Then run the script:
+
+```
+.\JV-EntraIDGetPrivilegedEntApps.ps1
+```
