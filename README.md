@@ -11,6 +11,7 @@ A great, fast and easy PowerShell script to get all Entra ID Enterprise Applicat
 - Query all privileges in those Enterprise Applications
 - Query if a secret or certificate is linked to a Enterprise Application
 - Pre-formatted for use with Excel
+- Applications without Application or Delegated permissions will be skipped and not in the CSV file
 
 ---
 
