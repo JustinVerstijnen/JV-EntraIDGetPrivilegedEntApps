@@ -1,6 +1,9 @@
 # Justin Verstijnen Entra ID Get Privileged Enterprise Applications-script
 # Let's start!
 
+# === PARAMETERS ===
+$exportfile = "JV-EntraIDGetPrivilegedEntApps_report.csv"
+
 # Step 1: Sign in
 Write-Host -Foreground Green "Let's sign you in to Microsoft Entra ID:"
 Connect-MgGraph -Scopes "Application.Read.All", "Directory.Read.All" -NoWelcome
@@ -56,7 +59,7 @@ foreach ($app in $applications) {
 }
 
 # Step 5: Exporting
-$appDetails | Export-Csv -Path "JV-EntraIDGetPrivilegedApps_Report.csv" -NoTypeInformation -Encoding UTF8 -Delimiter ";"
-Write-Host "Export finished: JV-EntraIDGetPrivilegedApps_Report.csv" -ForegroundColor Green
+$appDetails | Export-Csv -Path $exportfile -NoTypeInformation -Encoding UTF8 -Delimiter ";"
+Write-Host "Export finished: $exportfile" -ForegroundColor Green
 Write-Host -Foreground Green "If no further errors occured, the script has been succesfully executed. Go check out your file. Thank you for using my script!"
 Start-Sleep -Seconds 3
